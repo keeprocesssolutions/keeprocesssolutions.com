@@ -1,0 +1,25 @@
+title: Kee Process Solutions
+description: Process Development Consulting and Continuous Improvement Coaching
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation
+nav_links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# Contact info
+contact:
+  phone: "209-202-5346"
+  email: "Hayden.kee@keeprocesssolutions.com"
