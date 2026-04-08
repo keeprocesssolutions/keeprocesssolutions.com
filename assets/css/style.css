@@ -390,9 +390,13 @@ section { padding: 80px 0; }
 
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: 48px;
+}
+
+.approach-grid .approach-item:last-child {
+  grid-column: 2 / 4;
 }
 
 .approach-item {
@@ -428,6 +432,76 @@ section { padding: 80px 0; }
 }
 
 .approach-item p { font-size: 0.85rem; color: var(--gray-mid); }
+
+/* --- Why This Approach Works callout --- */
+.why-callout {
+  background: linear-gradient(135deg, var(--black) 0%, #1a0808 100%);
+  border-radius: 14px;
+  padding: 48px 52px;
+  margin-top: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-callout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(212,26,26,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.why-callout > * { position: relative; z-index: 1; }
+
+.why-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.why-intro {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.why-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.why-list li:last-child {
+  grid-column: 1 / -1;
+}
+
+.why-list li {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 3px solid var(--red);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.why-list li strong {
+  color: var(--white);
+  font-family: var(--font-head);
+}
+
+.why-close {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  margin-bottom: 0;
+}
 
 /* --- About page --- */
 .page-hero {
@@ -831,6 +905,10 @@ section { padding: 80px 0; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 
   .method-steps { grid-template-columns: 1fr 1fr; }
+  .approach-grid { grid-template-columns: 1fr 1fr; }
+  .approach-grid .approach-item:last-child { grid-column: 1 / -1; }
+  .why-list { grid-template-columns: 1fr; }
+  .why-list li:last-child { grid-column: auto; }
 }
 
 @media (max-width: 480px) {
@@ -839,4 +917,6 @@ section { padding: 80px 0; }
   .value-stats { grid-template-columns: 1fr; }
   .method-steps { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
+  .approach-grid { grid-template-columns: 1fr; }
+  .approach-grid .approach-item:last-child { grid-column: auto; }
 }
