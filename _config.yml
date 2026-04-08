@@ -6,6 +6,7 @@ url: ""
 # Build settings
 markdown: kramdown
 theme: null
+permalink: pretty
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
