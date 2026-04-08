@@ -7,8 +7,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --red:        #fb2056;
-  --red-dark:   #da1c4b;
+  --red:        #d41a1a;
+  --red-dark:   #b01212;
   --black:      #191919;
   --gray-dark:  #404040;
   --gray-mid:   #6b6b6b;
@@ -142,7 +142,7 @@ img { max-width: 100%; display: block; }
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(135deg, var(--black) 0%, #2a0a12 100%);
+  background: url('/assets/images/hero-trees.jpg') center center / cover no-repeat;
   padding: 100px 0 90px;
   text-align: center;
   position: relative;
@@ -153,7 +153,7 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 60% 40%, rgba(251,32,86,0.18) 0%, transparent 70%);
+  background: rgba(25,25,25,0.72);
   pointer-events: none;
 }
 
@@ -166,9 +166,9 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--red);
-  background: rgba(251,32,86,0.12);
-  border: 1px solid rgba(251,32,86,0.3);
+  color: var(--white);
+  background: var(--red);
+  border: 1px solid var(--red);
   border-radius: 999px;
   padding: 4px 16px;
   margin-bottom: 28px;
@@ -431,9 +431,23 @@ section { padding: 80px 0; }
 
 /* --- About page --- */
 .page-hero {
-  background: linear-gradient(135deg, var(--black) 0%, #1e0910 100%);
+  background: url('/assets/images/hero-trees.jpg') center center / cover no-repeat;
   padding: 72px 0 64px;
   text-align: center;
+  position: relative;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25,25,25,0.72);
+  pointer-events: none;
+}
+
+.page-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {
@@ -465,11 +479,16 @@ section { padding: 80px 0; }
 
 .about-photo {
   width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--gray-light);
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .about-photo-placeholder {
@@ -498,9 +517,8 @@ section { padding: 80px 0; }
 }
 
 .about-photo-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  display: inline-block;
+  margin-top: 12px;
   background: var(--red);
   color: var(--white);
   font-family: var(--font-head);
