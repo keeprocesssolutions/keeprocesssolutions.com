@@ -64,19 +64,9 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
 }
 
-.logo-mark {
-  width: 44px;
-  height: 44px;
-  background: var(--red);
-  color: var(--white);
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo-img {
+  height: 54px;
+  width: auto;
   flex-shrink: 0;
 }
 

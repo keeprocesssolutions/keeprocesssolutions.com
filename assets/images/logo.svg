@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 278 44">
+  <defs>
+    <!-- Arrowhead marker -->
+    <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4"
+      markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L8 4 L0 8 L2 4 Z" fill="#C9A84C"/>
+    </marker>
+  </defs>
+
+  <!-- === Process flow mark: node → node → node === -->
+
+  <!-- Node 1: filled (start) -->
+  <circle cx="10" cy="22" r="5.5" fill="#C9A84C"/>
+
+  <!-- Connector 1 with arrowhead -->
+  <line x1="16" y1="22" x2="29" y2="22"
+    stroke="#C9A84C" stroke-width="2.5"
+    marker-end="url(#arr)"/>
+
+  <!-- Node 2: ring (process in motion) -->
+  <circle cx="38" cy="22" r="5.5"
+    fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+
+  <!-- Connector 2 with arrowhead -->
+  <line x1="44" y1="22" x2="57" y2="22"
+    stroke="#C9A84C" stroke-width="2.5"
+    marker-end="url(#arr)"/>
+
+  <!-- Node 3: filled (output) -->
+  <circle cx="66" cy="22" r="5.5" fill="#C9A84C"/>
+
+  <!-- Divider -->
+  <line x1="82" y1="10" x2="82" y2="34"
+    stroke="#C9A84C" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Wordmark -->
+  <text
+    x="91"
+    y="28"
+    font-family="'Montserrat', 'Arial Black', sans-serif"
+    font-weight="800"
+    font-size="13"
+    letter-spacing="0.5"
+    fill="#C9A84C">Kee Process Solutions</text>
+
+</svg>
